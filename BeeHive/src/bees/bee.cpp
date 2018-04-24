@@ -7,7 +7,9 @@ using namespace bees;
 using std::cout;
 using std::endl;
 
-Bee::Bee(Role role, world::Beehive *beehive):role_(role), beehive_(beehive) {}
+int Bee::bee_counter_ = 0;
+
+Bee::Bee(Role role, world::Beehive *beehive):role_(role), beehive_(beehive), id_{bee_counter_++} {}
 
 Bee::~Bee() {}
 
@@ -15,7 +17,11 @@ Bee::Role Bee::get_role() const {
     return role_;
 }
 
-world::Beehive* Bee::get_Beehive() {
+int Bee::get_id() const {
+    return id_;
+}
+
+world::Beehive* Bee::get_Beehive() const {
     return beehive_;
 }
 

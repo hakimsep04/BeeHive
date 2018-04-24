@@ -10,6 +10,11 @@ namespace bees{
 
         void run() override;
 
+        int get_resource_number() const override;
+
+        static bool active_;
+        static int counter_;
+
 
     private:
 

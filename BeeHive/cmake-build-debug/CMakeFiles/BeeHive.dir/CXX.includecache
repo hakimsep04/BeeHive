@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bee_main.cpp
+world/beehive.h
+/Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/world/beehive.h
 
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/bee.cpp
 iostream
@@ -77,18 +79,24 @@ deque
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/util/logger.h
 ../bees/bee.h
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/bee.h
+flower_field.h
+/Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/world/flower_field.h
 thread
 -
 
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/world/flower_field.cpp
 flower_field.h
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/world/flower_field.h
+beehive.h
+/Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/world/beehive.h
 
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/world/flower_field.h
 mutex
 -
 ../bees/bee.h
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/bee.h
+../bees/worker.h
+/Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/worker.h
 
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/world/queens_chamber.cpp
 

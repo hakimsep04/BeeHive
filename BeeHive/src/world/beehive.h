@@ -5,6 +5,7 @@
 #include "../util/random.h"
 #include "../util/logger.h"
 #include "../bees/bee.h"
+#include "flower_field.h"
 #include <thread>
 
 
@@ -22,13 +23,13 @@ namespace world{
 
         unsigned int roll_dice(unsigned int min, unsigned int max);
 
-        void start();
-
         void start_simulation();
 
         void end_simulation();
 
         util::logger& get_logger();
+
+        world::FlowerField& get_flower_field();
 
     private:
         unsigned int num_drones_;
@@ -38,7 +39,7 @@ namespace world{
         util::logger log_;
         std::deque<std::unique_ptr<bees::Bee> > bee_collection_;
         std::deque<std::thread > bee_thread_collection_;
-
+        world::FlowerField flower_field_;
 
 
     };
