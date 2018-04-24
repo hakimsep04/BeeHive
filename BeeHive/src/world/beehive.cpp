@@ -4,12 +4,27 @@
 using std::thread;
 using namespace world;
 
+bool Beehive::is_active = false;
+
 Beehive::Beehive(unsigned long long seed, unsigned int drones, unsigned int nectar_worker,
                  unsigned int pollen_worker) : num_drones_(drones), num_nectar_worker_(nectar_worker),
                                                num_pollen_worker_(pollen_worker), random_(util::random(seed)),
                                                log_(util::logger(std::cout)),
                                                bee_collection_(), bee_thread_collection_(),
-                                               flower_field_(world::FlowerField()) {
+                                               flower_field_(world::FlowerField()),
+                                               resource_(bees::Resource()) {
+
+    for (unsigned int i = 0; i < num_drones_; i++) {
+        //this->add_bee(bees::Bee::createBee(bees::Bee::Role::DRONES, this));
+    }
+
+    for (unsigned int i = 0; i < num_nectar_worker_; i++) {
+        this->add_bee(bees::Bee::createBee(bees::Bee::Role::NECTAR, this));
+    }
+
+    for (unsigned int i = 0; i < num_pollen_worker_; i++) {
+        this->add_bee(bees::Bee::createBee(bees::Bee::Role::POLLEN, this));
+    }
 
 }
 
@@ -31,34 +46,22 @@ world::FlowerField& Beehive::get_flower_field() {
     return flower_field_;
 }
 
+bees::Resource& Beehive::get_resource() {
+    return resource_;
+}
+
 void Beehive::start_simulation() {
-    //Bee objects creation
 
-    //Create queen object
-    //create drone objects
-    for (unsigned int i = 0; i < num_drones_; i++) {
-        //this->add_bee(bees::Bee::createBee(bees::Bee::Role::DRONES, this));
-    }
-
-    for (unsigned int i = 0; i < num_nectar_worker_; i++) {
-        this->add_bee(bees::Bee::createBee(bees::Bee::Role::NECTAR, this));
-    }
-
-    for (unsigned int i = 0; i < num_pollen_worker_; i++) {
-        this->add_bee(bees::Bee::createBee(bees::Bee::Role::POLLEN, this));
-    }
-
+    Beehive::is_active = true;
+    //Starting threads for each bee object
     for (unsigned int i = 0; i < bee_collection_.size(); i++) {
         bee_thread_collection_.push_back(thread{&bees::Bee::run, std::move(bee_collection_[i])});
     }
 
-
-    //Starting threads for each bee object
-
-
 }
 
 void Beehive::end_simulation() {
+    Beehive::is_active = false;
     for (unsigned int i = 0; i < bee_collection_.size(); i++) {
         bee_thread_collection_[i].join();
     }

@@ -27,6 +27,12 @@ string
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/queen.cpp
 
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/resource.cpp
+resource.h
+/Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/resource.h
+
+/Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/resource.h
+worker.h
+/Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/worker.h
 
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/worker.cpp
 iostream
@@ -81,6 +87,8 @@ deque
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/bee.h
 flower_field.h
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/world/flower_field.h
+../bees/resource.h
+/Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/resource.h
 thread
 -
 

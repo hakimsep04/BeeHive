@@ -6,6 +6,7 @@
 #include "../util/logger.h"
 #include "../bees/bee.h"
 #include "flower_field.h"
+#include "../bees/resource.h"
 #include <thread>
 
 
@@ -31,6 +32,10 @@ namespace world{
 
         world::FlowerField& get_flower_field();
 
+        bees::Resource& get_resource();
+
+        static bool is_active;
+
     private:
         unsigned int num_drones_;
         unsigned int num_nectar_worker_;
@@ -40,6 +45,7 @@ namespace world{
         std::deque<std::unique_ptr<bees::Bee> > bee_collection_;
         std::deque<std::thread > bee_thread_collection_;
         world::FlowerField flower_field_;
+        bees::Resource resource_;
 
 
     };

@@ -6,9 +6,6 @@ using namespace bees;
 using std::cout;
 using std::endl;
 
-bool Worker::active_ = true;
-int Worker::counter_ = 0;
-
 Worker::Worker(Bee::Role role, world::Beehive *beehive): Bee::Bee(role, beehive) {
     resource_number_ = this->get_Beehive()->roll_dice(1,6);
 }
@@ -18,7 +15,7 @@ int Worker::get_resource_number() const {
 }
 
 void Worker::run() {
-    while(active_){
+    while(world::Beehive::is_active){
 
         this->get_Beehive()->get_flower_field().enter_field(this);
 
@@ -28,11 +25,13 @@ void Worker::run() {
         this->get_Beehive()->get_flower_field().leave_field(this);
 
         this->get_Beehive()->get_logger().log("depositing resources" + std::to_string(this->get_id()));
+        this->get_Beehive()->get_resource().deposit(this);
 
-        counter_++;
-        if(counter_ == 8){
-            active_ = false;
-            cout << "Worker halts" << endl;
+        unsigned int consumed_resource = this->get_Beehive()->get_resource().consume_resource(1);
+
+        if(consumed_resource == 0){
+            this->get_Beehive()->get_logger().log("Perished" + std::to_string(this->get_id()));
+            break;
         }
 
     }

@@ -4,6 +4,7 @@
 CMakeFiles/BeeHive.dir/src/bee_main.cpp.o
  /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bee_main.cpp
  /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/bee.h
+ /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/resource.h
  /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/worker.h
  /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/util/logger.h
  /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/util/random.h
@@ -18,9 +19,13 @@ CMakeFiles/BeeHive.dir/src/bees/drone.cpp.o
 CMakeFiles/BeeHive.dir/src/bees/queen.cpp.o
  /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/queen.cpp
 CMakeFiles/BeeHive.dir/src/bees/resource.cpp.o
+ /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/bee.h
  /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/resource.cpp
+ /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/resource.h
+ /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/worker.h
 CMakeFiles/BeeHive.dir/src/bees/worker.cpp.o
  /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/bee.h
+ /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/resource.h
  /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/worker.cpp
  /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/worker.h
  /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/util/logger.h
@@ -38,6 +43,7 @@ CMakeFiles/BeeHive.dir/src/util/random.cpp.o
  /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/util/random.h
 CMakeFiles/BeeHive.dir/src/world/beehive.cpp.o
  /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/bee.h
+ /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/resource.h
  /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/worker.h
  /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/util/logger.h
  /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/util/random.h
@@ -46,6 +52,7 @@ CMakeFiles/BeeHive.dir/src/world/beehive.cpp.o
  /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/world/flower_field.h
 CMakeFiles/BeeHive.dir/src/world/flower_field.cpp.o
  /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/bee.h
+ /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/resource.h
  /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/worker.h
  /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/util/logger.h
  /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/util/random.h
