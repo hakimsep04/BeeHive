@@ -5,9 +5,10 @@ using std::thread;
 using namespace world;
 
 Beehive::Beehive(unsigned long long seed, unsigned int drones, unsigned int nectar_worker,
-                 unsigned int pollen_worker) : num_drones_{drones}, num_nectar_worker_{nectar_worker},
-                                               num_pollen_worker_{pollen_worker}, random_(util::random(seed)),
-                                               bee_collection_{}, bee_thread_collection_{} {
+                 unsigned int pollen_worker) : num_drones_(drones), num_nectar_worker_(nectar_worker),
+                                               num_pollen_worker_(pollen_worker), random_(util::random(seed)),
+                                               log_(util::logger(std::cout)),
+                                               bee_collection_(), bee_thread_collection_() {
 
 }
 
@@ -25,13 +26,11 @@ unsigned int Beehive::roll_dice(unsigned int min, unsigned int max) {
 }
 
 void Beehive::add_bee(std::unique_ptr<bees::Bee> bee) {
-    bee_collection_.push_back(bee);
+    bee_collection_.push_back(std::move(bee));
 }
 
-void Beehive::start() {
-    for (int i = 0; i < bee_collection_.size(); i++) {
-        thread{&bees::Bee::run, this};
-    }
+util::logger& Beehive::get_logger() {
+    return log_;
 }
 
 void Beehive::start_simulation() {
@@ -39,20 +38,20 @@ void Beehive::start_simulation() {
 
     //Create queen object
     //create drone objects
-    for(int i = 0; i< num_drones_; i++){
+    for (unsigned int i = 0; i < num_drones_; i++) {
         //this->add_bee(bees::Bee::createBee(bees::Bee::Role::DRONES, this));
     }
 
-    for(int i = 0; i< num_nectar_worker_; i++){
+    for (unsigned int i = 0; i < num_nectar_worker_; i++) {
         this->add_bee(bees::Bee::createBee(bees::Bee::Role::NECTAR, this));
     }
 
-    for(int i = 0; i< num_pollen_worker_; i++){
+    for (unsigned int i = 0; i < num_pollen_worker_; i++) {
         this->add_bee(bees::Bee::createBee(bees::Bee::Role::POLLEN, this));
     }
 
-    for(int i =0; i< bee_collection_.size(); i++){
-        bee_thread_collection_.push_back(thread{&bees::Bee::run, bee_collection_[i]});
+    for (unsigned int i = 0; i < bee_collection_.size(); i++) {
+        bee_thread_collection_.push_back(thread{&bees::Bee::run, std::move(bee_collection_[i])});
     }
 
 

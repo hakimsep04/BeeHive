@@ -13,7 +13,6 @@ namespace bees{
 
     private:
 
-        world::Beehive *beehive_;
         int resource_number_;
     };
 }

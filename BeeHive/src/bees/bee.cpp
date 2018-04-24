@@ -7,13 +7,19 @@ using namespace bees;
 using std::cout;
 using std::endl;
 
-Bee::Bee(Role role):role_(role) {}
+Bee::Bee(Role role, world::Beehive *beehive):role_(role), beehive_(beehive) {}
+
+Bee::~Bee() {}
 
 Bee::Role Bee::get_role() const {
     return role_;
 }
 
-std::string Bee::operator std::string() const {
+world::Beehive* Bee::get_Beehive() {
+    return beehive_;
+}
+
+Bee::operator std::string() const {
     switch (role_){
         case QUEEN:
             return "QUEEN";
@@ -30,8 +36,8 @@ std::string Bee::operator std::string() const {
 std::unique_ptr<Bee> Bee::createBee(Role role, world::Beehive *beehive) {
     switch (role){
         case NECTAR:
-            return new Worker(role, beehive);
+            return std::unique_ptr<bees::Bee>(new Worker(role, beehive));
         case POLLEN:
-            return new Worker(role, beehive);
+            return std::unique_ptr<bees::Bee>(new Worker(role, beehive));
     }
 }

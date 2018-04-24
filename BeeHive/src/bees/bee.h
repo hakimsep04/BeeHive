@@ -29,11 +29,14 @@ namespace bees{
 
         virtual void run() = 0;
 
+        world::Beehive * get_Beehive();
+
     protected:
-        Bee (Role role);
+        Bee (Role role, world::Beehive *beehive);
 
     private:
         Role role_;
+        world::Beehive *beehive_;
 
     };
 }

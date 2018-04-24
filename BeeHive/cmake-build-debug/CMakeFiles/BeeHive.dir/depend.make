@@ -16,6 +16,7 @@ CMakeFiles/BeeHive.dir/src/bees/resource.cpp.o: ../src/bees/resource.cpp
 CMakeFiles/BeeHive.dir/src/bees/worker.cpp.o: ../src/bees/bee.h
 CMakeFiles/BeeHive.dir/src/bees/worker.cpp.o: ../src/bees/worker.cpp
 CMakeFiles/BeeHive.dir/src/bees/worker.cpp.o: ../src/bees/worker.h
+CMakeFiles/BeeHive.dir/src/bees/worker.cpp.o: ../src/util/logger.h
 CMakeFiles/BeeHive.dir/src/bees/worker.cpp.o: ../src/util/random.h
 CMakeFiles/BeeHive.dir/src/bees/worker.cpp.o: ../src/world/beehive.h
 
@@ -29,11 +30,14 @@ CMakeFiles/BeeHive.dir/src/util/random.cpp.o: ../src/util/random.cpp
 CMakeFiles/BeeHive.dir/src/util/random.cpp.o: ../src/util/random.h
 
 CMakeFiles/BeeHive.dir/src/world/beehive.cpp.o: ../src/bees/bee.h
+CMakeFiles/BeeHive.dir/src/world/beehive.cpp.o: ../src/util/logger.h
 CMakeFiles/BeeHive.dir/src/world/beehive.cpp.o: ../src/util/random.h
 CMakeFiles/BeeHive.dir/src/world/beehive.cpp.o: ../src/world/beehive.cpp
 CMakeFiles/BeeHive.dir/src/world/beehive.cpp.o: ../src/world/beehive.h
 
+CMakeFiles/BeeHive.dir/src/world/flower_field.cpp.o: ../src/bees/bee.h
 CMakeFiles/BeeHive.dir/src/world/flower_field.cpp.o: ../src/world/flower_field.cpp
+CMakeFiles/BeeHive.dir/src/world/flower_field.cpp.o: ../src/world/flower_field.h
 
 CMakeFiles/BeeHive.dir/src/world/queens_chamber.cpp.o: ../src/world/queens_chamber.cpp
 

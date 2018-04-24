@@ -3,6 +3,7 @@
 
 #include <deque>
 #include "../util/random.h"
+#include "../util/logger.h"
 #include "../bees/bee.h"
 #include <thread>
 
@@ -27,13 +28,18 @@ namespace world{
 
         void end_simulation();
 
+        util::logger& get_logger();
+
     private:
         unsigned int num_drones_;
         unsigned int num_nectar_worker_;
         unsigned int num_pollen_worker_;
         util::random random_;
+        util::logger log_;
         std::deque<std::unique_ptr<bees::Bee> > bee_collection_;
         std::deque<std::thread > bee_thread_collection_;
+
+
 
     };
 }
