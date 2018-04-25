@@ -4,6 +4,7 @@
 #include <mutex>
 #include "../bees/bee.h"
 #include "../bees/worker.h"
+#include <condition_variable>
 
 namespace world{
     class FlowerField{

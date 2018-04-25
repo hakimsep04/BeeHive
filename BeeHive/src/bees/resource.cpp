@@ -26,8 +26,8 @@ unsigned int Resource::consume_resource(unsigned int claim) {
     }else{
         claimed = std::min(nectar_gathered_, pollen_gathered_);
     }
-    nectar_gathered_ -= claim;
-    pollen_gathered_ -= claim;
+    nectar_gathered_ -= claimed;
+    pollen_gathered_ -= claimed;
 
     return claimed;
 }

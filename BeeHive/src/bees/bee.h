@@ -2,6 +2,7 @@
 #define BEE_H
 
 #include <string>
+#include <memory>
 
 namespace world{
     class Beehive;
