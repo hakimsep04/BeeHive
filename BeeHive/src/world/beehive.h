@@ -7,7 +7,12 @@
 #include "../bees/bee.h"
 #include "flower_field.h"
 #include "../bees/resource.h"
+#include "queens_chamber.h"
 #include <thread>
+
+namespace world{
+    class Queens_Chamber;
+}
 
 
 
@@ -18,9 +23,11 @@ namespace world{
 
         ~Beehive();
 
-        std::deque<std::unique_ptr<bees::Bee>> get_bees();
+        std::deque<std::unique_ptr<bees::Bee>>* get_bees();
 
         void add_bee(std::unique_ptr<bees::Bee> bee);
+
+        void add_bee_thread(std::unique_ptr<bees::Bee> bee);
 
         unsigned int roll_dice(unsigned int min, unsigned int max);
 
@@ -34,6 +41,8 @@ namespace world{
 
         bees::Resource& get_resource();
 
+        world::Queens_Chamber* get_queens_chamber();
+
         static bool is_active;
 
     private:
@@ -46,6 +55,7 @@ namespace world{
         std::deque<std::thread > bee_thread_collection_;
         world::FlowerField *flower_field_;
         bees::Resource resource_;
+        world::Queens_Chamber *queens_chamber_;
 
 
     };

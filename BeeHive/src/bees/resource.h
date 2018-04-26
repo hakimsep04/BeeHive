@@ -2,6 +2,7 @@
 #define RESOURCE_H
 
 #include "worker.h"
+#include <mutex>
 
 namespace bees{
     class Resource{
@@ -25,6 +26,7 @@ namespace bees{
         unsigned int pollen_gathered_;
         unsigned int total_nectar_gathered_;
         unsigned int total_pollen_gathered_;
+        std::mutex mtx_;
     };
 }
 

@@ -30,11 +30,15 @@ namespace bees{
 
         virtual void run() = 0;
 
-        virtual int get_resource_number() const = 0;
+        virtual int get_resource_number() const;
 
         int get_id() const;
 
         world::Beehive * get_Beehive() const ;
+
+        int get_bees_born() const;
+
+        int get_perished_bees() const;
 
     protected:
         Bee (Role role, world::Beehive *beehive);
@@ -44,6 +48,8 @@ namespace bees{
         world::Beehive *beehive_;
         int id_;
         static int bee_counter_;
+        static int perished_bees_;
+
 
     };
 }

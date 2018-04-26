@@ -2,6 +2,8 @@
 #define WORKER_H
 
 #include "bee.h"
+#include <mutex>
+
 
 namespace bees{
     class Worker: public Bee {
@@ -12,13 +14,15 @@ namespace bees{
 
         int get_resource_number() const override;
 
-        static bool active_;
-        static int counter_;
-
+    private:
+        friend std::ostream &operator << (std::ostream &os, const Worker &worker);
 
     private:
-
         int resource_number_;
+
+
+
+
     };
 }
 

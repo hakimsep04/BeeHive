@@ -17,6 +17,10 @@ bee.h
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/bee.h
 worker.h
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/worker.h
+queen.h
+/Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/queen.h
+drone.h
+/Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/drone.h
 
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/bee.h
 string
@@ -25,8 +29,20 @@ memory
 -
 
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/drone.cpp
+drone.h
+/Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/drone.h
+
+/Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/drone.h
+../world/beehive.h
+/Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/world/beehive.h
 
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/queen.cpp
+queen.h
+/Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/queen.h
+
+/Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/queen.h
+../world/beehive.h
+/Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/world/beehive.h
 
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/resource.cpp
 resource.h
@@ -35,6 +51,8 @@ resource.h
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/resource.h
 worker.h
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/worker.h
+mutex
+-
 
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/worker.cpp
 iostream
@@ -47,6 +65,8 @@ worker.h
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/worker.h
 bee.h
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/bee.h
+mutex
+-
 
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/util/logger.cpp
 logger.h
@@ -91,6 +111,8 @@ flower_field.h
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/world/flower_field.h
 ../bees/resource.h
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/resource.h
+queens_chamber.h
+/Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/world/queens_chamber.h
 thread
 -
 
@@ -111,4 +133,14 @@ condition_variable
 -
 
 /Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/world/queens_chamber.cpp
+queens_chamber.h
+/Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/world/queens_chamber.h
+
+/Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/world/queens_chamber.h
+mutex
+-
+../bees/drone.h
+/Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/drone.h
+../bees/queen.h
+/Users/abdulhakim/Documents/CS/Courses/C++/project2/BeeHive/src/bees/queen.h
 

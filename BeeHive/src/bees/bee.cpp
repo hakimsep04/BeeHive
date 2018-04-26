@@ -1,6 +1,8 @@
 #include <iostream>
 #include "bee.h"
 #include "worker.h"
+#include "queen.h"
+#include "drone.h"
 
 using namespace bees;
 
@@ -8,10 +10,13 @@ using std::cout;
 using std::endl;
 
 int Bee::bee_counter_ = 0;
+int Bee::perished_bees_ = 0;
 
 Bee::Bee(Role role, world::Beehive *beehive):role_(role), beehive_(beehive), id_{bee_counter_++} {}
 
-Bee::~Bee() {}
+Bee::~Bee() {
+    perished_bees_++;
+}
 
 Bee::Role Bee::get_role() const {
     return role_;
@@ -41,9 +46,25 @@ Bee::operator std::string() const {
 
 std::unique_ptr<Bee> Bee::createBee(Role role, world::Beehive *beehive) {
     switch (role){
+        case QUEEN:
+            return std::unique_ptr<bees::Bee>(new Queen(role, beehive));
+        case DRONES:
+            return std::unique_ptr<bees::Bee>(new Drone(role, beehive));
         case NECTAR:
             return std::unique_ptr<bees::Bee>(new Worker(role, beehive));
         case POLLEN:
             return std::unique_ptr<bees::Bee>(new Worker(role, beehive));
     }
+}
+
+int Bee::get_bees_born() const {
+    return bee_counter_;
+}
+
+int Bee::get_resource_number() const {
+    return 0;
+}
+
+int Bee::get_perished_bees() const {
+    return perished_bees_;
 }
