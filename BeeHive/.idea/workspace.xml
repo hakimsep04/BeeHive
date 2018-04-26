@@ -26,11 +26,21 @@
       <file leaf-file-name="queens_chamber.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/world/queens_chamber.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="49" lean-forward="false" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+            <state relative-caret-position="210">
+              <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
               <folding>
                 <element signature="e#51#67#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bee_main.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bee_main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="51" lean-forward="true" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -48,8 +58,8 @@
       <file leaf-file-name="beehive.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/world/beehive.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="68" column="1" lean-forward="true" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
+            <state relative-caret-position="-354">
+              <caret line="36" column="27" lean-forward="false" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -68,7 +78,7 @@
       <file leaf-file-name="beehive.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/world/beehive.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
+            <state relative-caret-position="27">
               <caret line="29" column="60" lean-forward="false" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
               <folding>
                 <element signature="e#37#53#0" expanded="true" />
@@ -90,8 +100,8 @@
       <file leaf-file-name="queens_chamber.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/world/queens_chamber.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="34" column="11" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+            <state relative-caret-position="553">
+              <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -100,8 +110,8 @@
       <file leaf-file-name="queen.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bees/queen.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+            <state relative-caret-position="456">
+              <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -126,7 +136,6 @@
         <option value="$PROJECT_DIR$/BeeHive/world/beehive.cpp" />
         <option value="$PROJECT_DIR$/src/bees/bee.h" />
         <option value="$PROJECT_DIR$/src/bees/bee.cpp" />
-        <option value="$PROJECT_DIR$/src/bee_main.cpp" />
         <option value="$PROJECT_DIR$/src/bees/drone.h" />
         <option value="$PROJECT_DIR$/src/bees/queen.h" />
         <option value="$PROJECT_DIR$/src/bees/worker.cpp" />
@@ -135,11 +144,12 @@
         <option value="$PROJECT_DIR$/src/bees/resource.h" />
         <option value="$PROJECT_DIR$/src/world/flower_field.cpp" />
         <option value="$PROJECT_DIR$/src/bees/drone.cpp" />
-        <option value="$PROJECT_DIR$/src/world/queens_chamber.h" />
-        <option value="$PROJECT_DIR$/src/world/queens_chamber.cpp" />
         <option value="$PROJECT_DIR$/src/world/beehive.h" />
-        <option value="$PROJECT_DIR$/src/world/beehive.cpp" />
+        <option value="$PROJECT_DIR$/src/world/queens_chamber.h" />
         <option value="$PROJECT_DIR$/src/bees/queen.cpp" />
+        <option value="$PROJECT_DIR$/src/bee_main.cpp" />
+        <option value="$PROJECT_DIR$/src/world/queens_chamber.cpp" />
+        <option value="$PROJECT_DIR$/src/world/beehive.cpp" />
       </list>
     </option>
   </component>
@@ -224,7 +234,7 @@
     <configuration name="BeeHive" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BeeHive" TARGET_NAME="BeeHive" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BeeHive" RUN_TARGET_NAME="BeeHive">
       <envs />
     </configuration>
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="0 10 1 2 2" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BeeHive" RUN_TARGET_NAME="BeeHive" EXPLICIT_BUILD_TARGET_NAME="all">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="0 300 20 20 20" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BeeHive" RUN_TARGET_NAME="BeeHive" EXPLICIT_BUILD_TARGET_NAME="all">
       <envs />
     </configuration>
     <list size="2">
@@ -247,12 +257,12 @@
       <updated>1524511991094</updated>
       <workItem from="1524511993775" duration="42609000" />
       <workItem from="1524619550220" duration="20000" />
-      <workItem from="1524620012980" duration="27062000" />
+      <workItem from="1524620012980" duration="32650000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69691000" />
+    <option name="totallyTimeSpent" value="75279000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="565" y="0" width="1115" height="1050" extended-state="6" />
@@ -263,7 +273,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3009212" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32036847" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45240533" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -356,14 +366,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bee_main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="23" column="70" lean-forward="false" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bees/drone.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -426,20 +428,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/world/queens_chamber.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="49" lean-forward="false" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-          <folding>
-            <element signature="e#51#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bees/queen.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="78" lean-forward="false" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bees/bee.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -460,17 +460,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bees/bee.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/world/beehive.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
+        <state relative-caret-position="27">
           <caret line="29" column="60" lean-forward="false" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
           <folding>
             <element signature="e#37#53#0" expanded="true" />
@@ -478,26 +470,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/world/queens_chamber.cpp">
+    <entry file="file://$PROJECT_DIR$/src/bee_main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="34" column="11" lean-forward="false" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+        <state relative-caret-position="435">
+          <caret line="29" column="51" lean-forward="true" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bees/queen.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        <state relative-caret-position="456">
+          <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/world/queens_chamber.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/world/queens_chamber.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding>
+            <element signature="e#51#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/world/beehive.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="68" column="1" lean-forward="true" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
+        <state relative-caret-position="-354">
+          <caret line="36" column="27" lean-forward="false" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
           <folding />
         </state>
       </provider>

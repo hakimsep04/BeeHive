@@ -34,6 +34,7 @@ Beehive::Beehive(unsigned long long seed, unsigned int drones, unsigned int nect
 Beehive::~Beehive() {
     delete log_;
     delete flower_field_;
+    delete queens_chamber_;
 }
 
 std::deque<std::unique_ptr<bees::Bee>>* Beehive::get_bees() {
@@ -81,7 +82,9 @@ void Beehive::start_simulation() {
 void Beehive::end_simulation() {
     Beehive::is_active = false;
     for (unsigned int i = 0; i < bee_collection_.size(); i++) {
-        bee_thread_collection_[i].join();
+        if(bee_thread_collection_[i].joinable()){
+            bee_thread_collection_[i].join();
+        }
     }
     std::cout << "*BH* Beehive stops buzzing!" << std::endl;
 }

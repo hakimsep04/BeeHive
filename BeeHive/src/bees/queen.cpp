@@ -33,8 +33,7 @@ void Queen::run() {
         std::cout << "Finished mating and going to sleep" << std::endl;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
-    this->get_Beehive()->get_queens_chamber()->free_drone_bees(this);
-//    this->get_Beehive()->get_queens_chamber()->chamber_queen(this);
+    this->get_Beehive()->get_queens_chamber()->free_drone_bees();
 }
 
 namespace bees{
