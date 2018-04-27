@@ -32,6 +32,8 @@ namespace bees{
 
         virtual int get_resource_number() const;
 
+        virtual std::string print_bee() = 0;
+
         int get_id() const;
 
         world::Beehive * get_Beehive() const ;

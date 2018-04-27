@@ -25,14 +25,17 @@ int main(int argc, char* argv[]) {
             cout << "Starting pollen workers: " << pollen_workers << endl;
 
             Beehive bh(seed, drones, nectar_workers, pollen_workers);
-            cout << "Start simulation" << endl;
+//            cout << "Start simulation" << endl;
             bh.start_simulation();
-            cout << "Main thread sleeping" << endl;
+//            cout << "Main thread sleeping" << endl;
             std::this_thread::sleep_for(std::chrono::seconds(seconds));
-            cout << "Main thread awake and stop simulation" << endl;
+//            cout << "Main thread awake and stop simulation" << endl;
             bh.end_simulation();
 
             //statistics
+            cout << endl;
+            cout << "STATISTICS" << endl;
+            cout << "===========" << endl;
             cout << "Bees born : " << bh.get_bees()->front()->get_bees_born() << endl;
             cout << "Bees perished : " << bh.get_bees()->front()->get_perished_bees() << endl;
             cout << "Nectar remaining " << bh.get_resource()->get_nectar_gathered() << endl;

@@ -3,6 +3,8 @@
 
 using std::thread;
 using namespace world;
+using std::cout;
+using std::endl;
 
 bool Beehive::is_active = false;
 
@@ -28,7 +30,6 @@ Beehive::Beehive(unsigned long long seed, unsigned int drones, unsigned int nect
     for (unsigned int i = 0; i < num_pollen_worker_; i++) {
         this->add_bee(bees::Bee::createBee(bees::Bee::Role::POLLEN, this));
     }
-
 }
 
 Beehive::~Beehive() {
@@ -77,7 +78,6 @@ void Beehive::start_simulation() {
     for (unsigned int i = 0; i < bee_collection_.size(); i++) {
         bee_thread_collection_.emplace_back(thread{&bees::Bee::run, std::move(bee_collection_[i])});
     }
-
 }
 
 void Beehive::end_simulation() {

@@ -12,7 +12,7 @@ using std::endl;
 int Bee::bee_counter_ = 0;
 int Bee::perished_bees_ = 0;
 
-Bee::Bee(Role role, world::Beehive *beehive):role_(role), beehive_(beehive), id_{bee_counter_++} {}
+Bee::Bee(Role role, world::Beehive *beehive):role_(role), beehive_(beehive), id_{++bee_counter_} {}
 
 Bee::~Bee() {
     perished_bees_++;

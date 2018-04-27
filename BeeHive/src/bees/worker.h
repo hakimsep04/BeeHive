@@ -14,6 +14,8 @@ namespace bees{
 
         int get_resource_number() const override;
 
+        std::string print_bee() override;
+
     private:
         friend std::ostream &operator << (std::ostream &os, const Worker &worker);
 

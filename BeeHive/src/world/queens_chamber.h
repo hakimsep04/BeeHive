@@ -16,7 +16,7 @@ namespace world{
         Queens_Chamber();
 
         void chamber_drone(bees::Drone *drone);
-        void chamber_queen(bees::Queen *queen);
+        void chamber_queen();
         void free_drone_bees();
 
         int get_num_drone_bees() const;
