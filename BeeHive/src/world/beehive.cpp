@@ -41,10 +41,6 @@ Beehive::~Beehive() {
     delete queens_chamber_;
 }
 
-std::deque<std::unique_ptr<bees::Bee>>* Beehive::get_bees() {
-    return &bee_collection_;
-}
-
 unsigned int Beehive::roll_dice(unsigned int min, unsigned int max) {
     return random_.roll_dice(min, max);
 }
@@ -79,6 +75,7 @@ void Beehive::add_perished_bees(std::string bee) {
 }
 
 void Beehive::print_perished_bees() {
+    std::cout << "Bees born : " << bee_thread_collection_.size() << endl;
     std::cout << "Bees perished: " << perished_bees_.size() << std::endl;
     for(unsigned int i = 0; i < perished_bees_.size(); i++){
         std::cout << "\t\t" << perished_bees_[i] << std::endl;

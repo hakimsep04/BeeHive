@@ -4,7 +4,7 @@ using namespace bees;
 
 
 Queen::Queen(Bee::Role role, world::Beehive *beehive):Bee::Bee(role, beehive) {
-    std::cout << "*B* " << this->print_bee() << " is born" << std::endl;
+    this->get_Beehive()->get_logger()->log("*B* " + this->print_bee() + " is born");
 }
 
 void Queen::run() {
@@ -23,7 +23,7 @@ void Queen::run() {
                     } else if(probability < 11){
                         this->get_Beehive()->add_bee_thread(bees::Bee::createBee(bees::Bee::Role::POLLEN, this->get_Beehive()));
                     }
-                    std::cout << "*Q* Queen birthed " << claimed << " children" << std::endl;
+                    this->get_Beehive()->get_logger()->log("*Q* Queen birthed " + std::to_string(claimed) + " children");
                 }
             }
         }
@@ -34,10 +34,4 @@ void Queen::run() {
 
 std::string Queen::print_bee() {
     return "QUEEN #" + std::to_string(this->get_id());
-}
-
-namespace bees{
-    std::ostream& operator<<(std::ostream &os, const Queen &queen) {
-        return os << "QUEEN #" << queen.get_id() << std::endl;
-    }
 }

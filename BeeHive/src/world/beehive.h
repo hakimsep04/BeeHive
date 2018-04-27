@@ -14,16 +14,12 @@ namespace world{
     class Queens_Chamber;
 }
 
-
-
 namespace world{
     class Beehive{
     public:
         Beehive(unsigned long long seed, unsigned int drones, unsigned int nectar_worker, unsigned int pollen_worker);
 
         ~Beehive();
-
-        std::deque<std::unique_ptr<bees::Bee>>* get_bees();
 
         void add_bee(std::unique_ptr<bees::Bee> bee);
 

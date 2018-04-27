@@ -11,9 +11,6 @@ namespace bees{
         void run() override;
 
         std::string print_bee() override;
-
-    private:
-        friend std::ostream &operator << (std::ostream &os, const Queen &queen);
     };
 }
 

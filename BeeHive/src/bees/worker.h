@@ -5,8 +5,8 @@
 #include <mutex>
 
 
-namespace bees{
-    class Worker: public Bee {
+namespace bees {
+    class Worker : public Bee {
     public:
         Worker(Bee::Role role, world::Beehive *beehive);
 
@@ -17,14 +17,7 @@ namespace bees{
         std::string print_bee() override;
 
     private:
-        friend std::ostream &operator << (std::ostream &os, const Worker &worker);
-
-    private:
         int resource_number_;
-
-
-
-
     };
 }
 

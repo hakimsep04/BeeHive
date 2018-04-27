@@ -33,14 +33,12 @@ void Queens_Chamber::chamber_drone(bees::Drone *drone) {
 void Queens_Chamber::chamber_queen() {
     is_queen_ready_ = true;
     queue_condition_variable_.notify_all();
-//    queen->get_Beehive()->get_logger()->log("*QC* Queen mates with " );
     std::this_thread::sleep_for(std::chrono::seconds(2));
 }
 
 void Queens_Chamber::free_drone_bees() {
     is_queen_ready_ = true;
     while(!drone_bee_collection_.empty()){
-//        std::cout << "queen trying to release :" <<drone_bee_collection_.size() << std::endl;
         queue_condition_variable_.notify_all();
     }
 }

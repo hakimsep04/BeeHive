@@ -57,14 +57,6 @@ std::unique_ptr<Bee> Bee::createBee(Role role, world::Beehive *beehive) {
     }
 }
 
-int Bee::get_bees_born() const {
-    return bee_counter_;
-}
-
 int Bee::get_resource_number() const {
     return 0;
 }
-
-//int Bee::get_perished_bees() const {
-//    return perished_bees_;
-//}

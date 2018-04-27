@@ -6,16 +6,15 @@
 #include "../bees/worker.h"
 #include <condition_variable>
 
-namespace world{
-    class FlowerField{
+namespace world {
+    class FlowerField {
     public:
 
         FlowerField();
 
-//        void field(bees::Worker* worker);
+        void enter_field(bees::Worker *worker);
 
-        void enter_field(bees::Worker* worker);
-        void leave_field(bees::Worker* worker);
+        void leave_field(bees::Worker *worker);
 
         static const unsigned int MAX_WORKER_BEES = 10;
 

@@ -4,16 +4,15 @@
 #include <string>
 #include <memory>
 
-namespace world{
+namespace world {
     class Beehive;
 }
 
-namespace bees{
-    class Bee{
+namespace bees {
+    class Bee {
     public:
 
-        enum Role
-        {
+        enum Role {
             QUEEN,
             DRONES,
             NECTAR,
@@ -26,7 +25,7 @@ namespace bees{
 
         operator std::string() const;
 
-        static std::unique_ptr<Bee> createBee (Role role, world::Beehive *beehive);
+        static std::unique_ptr<Bee> createBee(Role role, world::Beehive *beehive);
 
         virtual void run() = 0;
 
@@ -36,14 +35,11 @@ namespace bees{
 
         int get_id() const;
 
-        world::Beehive * get_Beehive() const ;
+        world::Beehive *get_Beehive() const;
 
-        int get_bees_born() const;
-
-//        int get_perished_bees() const;
 
     protected:
-        Bee (Role role, world::Beehive *beehive);
+        Bee(Role role, world::Beehive *beehive);
 
     private:
         Role role_;
