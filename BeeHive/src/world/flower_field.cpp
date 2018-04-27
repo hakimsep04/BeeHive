@@ -21,8 +21,11 @@ void FlowerField::enter_field(bees::Worker *worker) {
 }
 
 void FlowerField::leave_field(bees::Worker *worker) {
-    std::lock_guard<std::mutex> lg{mtx_};
-    bee_monitor_counter_--;
+    {
+        std::lock_guard<std::mutex> lg{mtx_};
+        bee_monitor_counter_--;
+    }
+
     condition_variable_.notify_one();
     worker->get_Beehive()->get_logger()->log("Leaving field" + std::to_string(worker->get_id()) + " #" + std::to_string(bee_monitor_counter_));
 }

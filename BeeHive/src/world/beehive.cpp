@@ -12,7 +12,7 @@ Beehive::Beehive(unsigned long long seed, unsigned int drones, unsigned int nect
                                                log_(new util::logger(std::cout)),
                                                bee_collection_(), bee_thread_collection_(),
                                                flower_field_(new world::FlowerField()),
-                                               resource_(bees::Resource()),
+                                               resource_(new bees::Resource()),
                                                queens_chamber_(new world::Queens_Chamber()) {
 
     this->add_bee(bees::Bee::createBee(bees::Bee::Role::QUEEN, this));
@@ -34,6 +34,7 @@ Beehive::Beehive(unsigned long long seed, unsigned int drones, unsigned int nect
 Beehive::~Beehive() {
     delete log_;
     delete flower_field_;
+    delete resource_;
     delete queens_chamber_;
 }
 
@@ -57,7 +58,7 @@ world::FlowerField* Beehive::get_flower_field() {
     return flower_field_;
 }
 
-bees::Resource& Beehive::get_resource() {
+bees::Resource* Beehive::get_resource() {
     return resource_;
 }
 
@@ -81,7 +82,7 @@ void Beehive::start_simulation() {
 
 void Beehive::end_simulation() {
     Beehive::is_active = false;
-    for (unsigned int i = 0; i < bee_collection_.size(); i++) {
+    for (unsigned int i = 0; i < bee_thread_collection_.size(); i++) {
         if(bee_thread_collection_[i].joinable()){
             bee_thread_collection_[i].join();
         }

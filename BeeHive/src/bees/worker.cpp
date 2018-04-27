@@ -28,9 +28,9 @@ void Worker::run() {
 
 
         this->get_Beehive()->get_logger()->log("depositing resources" + std::to_string(this->get_id()));
-        this->get_Beehive()->get_resource().deposit(this);
+        this->get_Beehive()->get_resource()->deposit(this);
 
-        unsigned int consumed_resource = this->get_Beehive()->get_resource().consume_resource(1);
+        unsigned int consumed_resource = this->get_Beehive()->get_resource()->consume_resource(1);
 
         if (consumed_resource == 0) {
             this->get_Beehive()->get_logger()->log("Perished" + std::to_string(this->get_id()));

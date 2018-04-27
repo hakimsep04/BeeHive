@@ -39,7 +39,7 @@ namespace world{
 
         world::FlowerField* get_flower_field();
 
-        bees::Resource& get_resource();
+        bees::Resource* get_resource();
 
         world::Queens_Chamber* get_queens_chamber();
 
@@ -54,7 +54,7 @@ namespace world{
         std::deque<std::unique_ptr<bees::Bee> > bee_collection_;
         std::deque<std::thread > bee_thread_collection_;
         world::FlowerField *flower_field_;
-        bees::Resource resource_;
+        bees::Resource *resource_;
         world::Queens_Chamber *queens_chamber_;
 
 

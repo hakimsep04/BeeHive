@@ -11,18 +11,21 @@ void Queen::run() {
         if(this->get_Beehive()->get_queens_chamber()->get_num_drone_bees() > 0){
             std::cout << "drones in chamber :" << this->get_Beehive()->get_queens_chamber()->get_num_drone_bees() << std::endl;
             std::cout << "First condition met" << std::endl;
-            if(this->get_Beehive()->get_resource().consume_resource(1) == 1){
+            if(this->get_Beehive()->get_resource()->consume_resource(1) == 1){
                 std::cout << "Both conditions met" << std::endl;
                 this->get_Beehive()->get_queens_chamber()->chamber_queen(this);
                 unsigned int claim = this->get_Beehive()->roll_dice(1,5);
-                unsigned int claimed = this->get_Beehive()->get_resource().consume_resource(claim);
+                unsigned int claimed = this->get_Beehive()->get_resource()->consume_resource(claim);
                 for(unsigned int i = 0; i < claimed; i++){
                     unsigned int probability = this->get_Beehive()->roll_dice(1,10);
                     if(probability < 7){
+                        std::cout << "Drone created : " << probability << std::endl;
                         this->get_Beehive()->add_bee_thread(bees::Bee::createBee(bees::Bee::Role::DRONES, this->get_Beehive()));
                     }else if(probability < 9){
+                        std::cout << "Nectar created : " << probability << std::endl;
                         this->get_Beehive()->add_bee_thread(bees::Bee::createBee(bees::Bee::Role::NECTAR, this->get_Beehive()));
-                    } else{
+                    } else if(probability < 11){
+                        std::cout << "Pollen created : " << probability << std::endl;
                         this->get_Beehive()->add_bee_thread(bees::Bee::createBee(bees::Bee::Role::POLLEN, this->get_Beehive()));
                     }
                 }
