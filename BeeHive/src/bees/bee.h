@@ -17,6 +17,14 @@ namespace bees {
     class Bee {
     public:
         /*
+         * Copy construction is forbidden by all
+         */
+        Bee(const Bee& other) = delete;
+        /*
+         * Copy assignment is forbidden by all
+         */
+        Bee& operator=(const Bee& other) = delete;
+        /*
          * Bee role
          * Enumerator
          * Queen

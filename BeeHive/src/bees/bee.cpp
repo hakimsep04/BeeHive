@@ -38,7 +38,6 @@ Bee::operator std::string() const {
             return "NECTAR";
         case POLLEN:
             return "POLLEN";
-
     }
 }
 

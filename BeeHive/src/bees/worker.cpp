@@ -8,7 +8,7 @@ using std::cout;
 using std::endl;
 
 
-Worker::Worker(Bee::Role role, world::Beehive *beehive) : Bee::Bee(role, beehive) {
+Worker::Worker(Bee::Role role, world::Beehive *beehive) : Bee::Bee(role, beehive), resource_number_{} {
     resource_number_ = this->get_Beehive()->roll_dice(1, 6);
     this->get_Beehive()->get_logger()->log("*B* " + this->print_bee() + " is born");
 }

@@ -27,6 +27,8 @@ namespace bees{
          * Get the string of queen role and it's id
          */
         std::string print_bee() override;
+
+
     };
 }
 

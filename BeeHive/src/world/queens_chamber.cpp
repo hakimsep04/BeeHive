@@ -14,9 +14,7 @@ void Queens_Chamber::chamber_drone(bees::Drone *drone) {
         drone_bee_collection_.push_back(drone);
         //Drone waits till the queen is ready and passes the lock if it is the first in the queue
         queue_condition_variable_.wait(ul, [&]{
-            if(is_queen_ready_){
-                return drone->get_id() == drone_bee_collection_[0]->get_id();
-            }
+            return drone->get_id() == drone_bee_collection_[0]->get_id() && is_queen_ready_;
         });
     }
     if(world::Beehive::is_active){

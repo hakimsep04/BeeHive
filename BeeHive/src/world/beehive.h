@@ -27,6 +27,14 @@ namespace world{
     class Beehive{
     public:
         /*
+         * Copy construction is forbidden by all
+         */
+        Beehive(const Beehive &other) = delete;
+        /*
+         * Copy assignment is forbidden by all
+         */
+        Beehive& operator=(const Beehive &other) = delete;
+        /*
          * Create beehive
          * @param seed
          *        # drones
