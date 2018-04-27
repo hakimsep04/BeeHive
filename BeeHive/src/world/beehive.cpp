@@ -93,6 +93,7 @@ void Beehive::start_simulation() {
 
 void Beehive::end_simulation() {
     Beehive::is_active = false;
+    //Joining each bee thread
     for (unsigned int i = 0; i < bee_thread_collection_.size(); i++) {
         if(bee_thread_collection_[i].joinable()){
             bee_thread_collection_[i].join();

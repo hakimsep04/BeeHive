@@ -26,8 +26,10 @@ void Resource::deposit(bees::Worker *worker) {
 unsigned int Resource::consume_resource(unsigned int claim) {
     std::lock_guard<std::mutex> lg{mtx_};
     unsigned int claimed = 0;
+    //return the number of resource if the claimed resource is available
     if (nectar_gathered_ >= claim && pollen_gathered_ >= claim) {
         claimed = claim;
+    //Else return the available pair of resource
     } else {
         claimed = std::min(nectar_gathered_, pollen_gathered_);
     }

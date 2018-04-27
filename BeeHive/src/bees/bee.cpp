@@ -9,14 +9,12 @@ using namespace bees;
 using std::cout;
 using std::endl;
 
+//Auto increment for unique bee id
 int Bee::bee_counter_ = 0;
-int Bee::perished_bees_ = 0;
 
 Bee::Bee(Role role, world::Beehive *beehive):role_(role), beehive_(beehive), id_{++bee_counter_} {}
 
-Bee::~Bee() {
-    perished_bees_++;
-}
+Bee::~Bee() {}
 
 Bee::Role Bee::get_role() const {
     return role_;

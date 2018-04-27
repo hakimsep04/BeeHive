@@ -3,6 +3,7 @@
 using namespace bees;
 
 Drone::Drone(Bee::Role role, world::Beehive *beehive): Bee::Bee(role, beehive) {
+    //Print a message when a new drone is born
     this->get_Beehive()->get_logger()->log("*B* " + this->print_bee() + " is born");
 }
 
