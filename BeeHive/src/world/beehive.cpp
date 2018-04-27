@@ -15,7 +15,9 @@ Beehive::Beehive(unsigned long long seed, unsigned int drones, unsigned int nect
                                                bee_collection_(), bee_thread_collection_(),
                                                flower_field_(new world::FlowerField()),
                                                resource_(new bees::Resource()),
-                                               queens_chamber_(new world::Queens_Chamber()) {
+                                               queens_chamber_(new world::Queens_Chamber()),
+                                               perished_bees_{},
+                                               perished_bees_mtx_{} {
 
     this->add_bee(bees::Bee::createBee(bees::Bee::Role::QUEEN, this));
 
@@ -69,6 +71,18 @@ world::Queens_Chamber* Beehive::get_queens_chamber() {
 
 void Beehive::add_bee_thread(std::unique_ptr<bees::Bee> bee) {
     bee_thread_collection_.emplace_back(thread{&bees::Bee::run, std::move(bee)});
+}
+
+void Beehive::add_perished_bees(std::string bee) {
+    std::lock_guard<std::mutex> lg(perished_bees_mtx_);
+    perished_bees_.emplace_back(bee);
+}
+
+void Beehive::print_perished_bees() {
+    std::cout << "Bees perished: " << perished_bees_.size() << std::endl;
+    for(unsigned int i = 0; i < perished_bees_.size(); i++){
+        std::cout << "\t\t" << perished_bees_[i] << std::endl;
+    }
 }
 
 void Beehive::start_simulation() {

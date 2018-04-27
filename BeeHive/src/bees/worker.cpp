@@ -36,6 +36,7 @@ void Worker::run() {
 
         if (consumed_resource == 0) {
             this->get_Beehive()->get_logger()->log( "*BH* " + this->print_bee() + " perished!" );
+            this->get_Beehive()->add_perished_bees(this->print_bee());
             break;
         }
 

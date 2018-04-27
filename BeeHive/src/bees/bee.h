@@ -40,7 +40,7 @@ namespace bees{
 
         int get_bees_born() const;
 
-        int get_perished_bees() const;
+//        int get_perished_bees() const;
 
     protected:
         Bee (Role role, world::Beehive *beehive);

@@ -65,6 +65,6 @@ int Bee::get_resource_number() const {
     return 0;
 }
 
-int Bee::get_perished_bees() const {
-    return perished_bees_;
-}
+//int Bee::get_perished_bees() const {
+//    return perished_bees_;
+//}

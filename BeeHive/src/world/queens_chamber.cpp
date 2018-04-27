@@ -22,6 +22,8 @@ void Queens_Chamber::chamber_drone(bees::Drone *drone) {
         drone->get_Beehive()->get_logger()->log("*QC* Queen mates with " + drone->print_bee());
         std::this_thread::sleep_for(std::chrono::seconds(2));
         is_queen_ready_ = false;
+        drone->get_Beehive()->get_logger()->log( "*BH* " + drone->print_bee() + " perished!" );
+        drone->get_Beehive()->add_perished_bees(drone->print_bee());
     }
     drone_bee_collection_.pop_front();
     drone->get_Beehive()->get_logger()->log( "*QC* " + drone->print_bee() + " leaves chamber");

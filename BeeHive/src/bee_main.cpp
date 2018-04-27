@@ -37,13 +37,12 @@ int main(int argc, char* argv[]) {
             cout << "STATISTICS" << endl;
             cout << "===========" << endl;
             cout << "Bees born : " << bh.get_bees()->front()->get_bees_born() << endl;
-            cout << "Bees perished : " << bh.get_bees()->front()->get_perished_bees() << endl;
+            bh.print_perished_bees();
+//            cout << "Bees perished : " << bh.get_bees()->front()->get_perished_bees() << endl;
             cout << "Nectar remaining " << bh.get_resource()->get_nectar_gathered() << endl;
             cout << "Pollen remaining " << bh.get_resource()->get_pollen_gathered() << endl;
             cout << "Nectar gathered " << bh.get_resource()->get_total_nectar() << endl;
             cout << "Pollen gathered " << bh.get_resource()->get_total_pollen() << endl;
-
-
 
     }
 

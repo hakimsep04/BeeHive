@@ -43,6 +43,10 @@ namespace world{
 
         world::Queens_Chamber* get_queens_chamber();
 
+        void add_perished_bees(std::string bee);
+
+        void print_perished_bees();
+
         static bool is_active;
 
     private:
@@ -56,6 +60,8 @@ namespace world{
         world::FlowerField *flower_field_;
         bees::Resource *resource_;
         world::Queens_Chamber *queens_chamber_;
+        std::deque<std::string> perished_bees_;
+        std::mutex perished_bees_mtx_;
 
 
     };
