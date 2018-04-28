@@ -36,9 +36,9 @@ void Queen::run() {
                     } else if(probability < 11){
                         this->get_Beehive()->add_bee_thread(bees::Bee::createBee(bees::Bee::Role::POLLEN, this->get_Beehive()));
                     }
-                    //Display a message of how many queen bees the queen has given birthed to
-                    this->get_Beehive()->get_logger()->log("*Q* Queen birthed " + std::to_string(claimed) + " children");
                 }
+                //Display a message of how many queen bees the queen has given birthed to
+                this->get_Beehive()->get_logger()->log("*Q* Queen birthed " + std::to_string(claimed) + " children");
             }
         }
         //Queen sleeps for one second before attempting to mate again
